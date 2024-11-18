@@ -3,8 +3,10 @@ import "./YoutubeVideos.css";
 
 const YoutubeVideos = () => {
   const [videos, setVideos] = useState(null); // Set initial state to null
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  console.log("API Key:", API_KEY); 
 
-  const API_KEY = "AIzaSyCmhcTSn1uvQEAJDAtMnARLzzPz-xcRJ9o";
+  // const API_KEY = "AIzaSyCmhcTSn1uvQEAJDAtMnARLzzPz-xcRJ9o";
   const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet&maxResults=8&type=video`;
 
   useEffect(() => {
